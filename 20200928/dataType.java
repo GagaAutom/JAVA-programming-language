@@ -1,13 +1,64 @@
-public class dataType{    
+public class dataType{ 
+    /**
+     * 布尔类型  boolean 
+     * 1、在Java中，布尔类型没有明确大小
+     * 2、在Java中，没有所谓的0和非0代表真假
+     *    只有true false
+     * @param  args [description]
+     * @return      [description]
+     */
+    public static void main(String[] args) {
+        boolean n = true;
+        System.out.println(n);
+    }
+    /**
+     * 短整型 short 2字节 
+     * @param  args [description]
+     * @return      [description]
+     */
+    public static void main7(String[] args) {
+        short b = 12;
+        System.out.println(b);
+        System.out.println(Short.MIN_VALUE);
+        System.out.println(Short.MAX_VALUE);
+    }
+    /**
+     * 字节类型 byte 1字节 -128~127
+     * @param  args [description]
+     * @return      [description]
+     */
+    public static void main6(String[] args) {
+        byte b = 12;
+        byte c = 21;
+        System.out.println(b+" "+c);
+        System.out.println(Byte.MIN_VALUE);
+        System.out.println(Byte.MAX_VALUE);
+    }
+    /**
+     * 字符数据类型 char Character 2个字节 0-65535
+     * @param  args [description]
+     * @return      [description]
+     */
+    public static void main5(String[] args) {
+        char ch = 'a';
+        System.out.println(ch);
+
+        char ch2 = '高';
+        System.out.println(ch2);
+
+        char ch3 = 97;//Unicode 字符集代码，相比ASCII包含字符更多
+        System.out.println(ch3);
+    }
     /**
      * 单精度浮点型 float Float 4个字节
      * @param  args [description]
      * @return      [description]
      */
-    public static void main(String[] args) {
+    public static void main4(String[] args) {
         float f = 12.3f;
         System.out.println(f);//会报错，12.3时系统默认为double类型，直接给f赋值可能发生精度丢失。
-
+        //体现了Java的安全性，保证了数据的精度安全，C语言只会警告，Java会禁止通过
+        
     }
     /**
      * 双精度浮点型 double Double   8个字节
